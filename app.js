@@ -1,6 +1,6 @@
 const sdkKey = "my1unmcyza10z52eknxb971wa";
-const host = document.getElementById(XQtZ1YH49mM);
-const client = document.getElementById(XQtZ1YH49mM);
+const host = document.getElementById("XQtZ1YH49mM");
+const client = document.getElementById("XQtZ1YH49mM");
 
 // Create Command Observer
 let cmd = {
