@@ -1,0 +1,119 @@
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  background: #000;
+  padding: 0;
+  margin: 0;
+}
+header {
+  line-height: 80px;
+  background-color: #222222;
+  color: #fff;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: row;
+}
+header h1 {
+  padding: 0;
+  margin: 0;
+  font-weight: 100;
+  line-height: 80px;
+  font-size: 24px;
+  float: left;
+  width: 75%;
+}
+header a {
+  width: 25%;
+  float: left;
+  text-align: right;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+article {
+  margin: 40px auto;
+  padding: 20px 20px 40px 20px;
+  max-width: 1120px;
+}
+footer {
+  background-color: #222222;
+  color: #fff;
+  padding: 40px;
+  font-size: 18px;
+}
+footer > * {
+  display: block;
+  margin: 0px auto 1.5em auto;
+  max-width: 800px;
+  line-height: 1.5em;
+  font-size: 14px;
+}
+footer h2 {
+  font-size: 24px;
+}
+header a,
+footer a {
+  color: #ff3158;
+}
+iframe {
+  border-radius: 20px;
+  margin: 0px auto 10px auto;
+  border: 1px solid #333;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  height: 480px;
+}
+b {
+  color: #00ff00;
+}
+
+#wrapper {
+  position: relative;
+}
+#sweepnav {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+#sweepnav button {
+  margin-bottom: 4px;
+  display: none;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 1px 1px 3px rgb(0 0 0 / 30%);
+  padding: 7.5px 25px;
+  height: 40px;
+  line-height: 25px;
+  font-family: IBM Plex Sans;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #f5f4f3;
+  transition: all 0.5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  background-color: #222;
+  overflow: hidden;
+}
+#sweepnav button.up,
+#sweepnav button.down,
+#sweepnav button.current {
+  display: block;
+}
+#sweepnav button.up::before {
+  content: "\2191";
+}
+#sweepnav button.down::before {
+  content: "\2193";
+}
+#sweepnav button.current::before {
+  content: "\2609";
+}
+#sweepnav button.current {
+  background-color: #f00;
+}
