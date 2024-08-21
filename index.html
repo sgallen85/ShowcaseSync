@@ -23,8 +23,8 @@
   </head>
   <body>
     <header>
-      <h1>ShowcaseSync - Replicate Motions</h1>
-      <a href="https://goshow.me">GoShow.me</a>
+      <h1>AI-powered gameplay with digital twins.</h1>
+      <a href="https://matterport.com">Matterport</a>
     </header>
     <article>
       <div id="wrapper">
@@ -58,27 +58,11 @@
     </article>
     <footer>
       <a name="about"></a>
-      <h2>ShowcaseSync</h2>
+      <h2>Spot the Difference</h2>
       <p>
-        The following demo launches two Showcase instances and replicates
-        actions on the left side with the right side.
+        Try to spot the difference between these Matterport digital twins.
       </p>
-      <p>
-        Camera.setRotation and Camera.pan have a tweening effect, therefore they
-        are no usable for a remote control app. I'm using Mode.setMode instead
-        as it is instantaneous. I've setup a promise queue system so that
-        commands execute in order. This can cause latency as panning and
-        changing sweeps are queued and can get out of sync. Returning to inside
-        mode from dollhouse mode also has its issues.
-      </p>
-      <h3>Issues</h3>
-      <ul>
-        <li>How does one sync moving from dollhouse mode to a new sweep?</li>
-      </ul>
-      <p>
-        <b>Conclusion</b>: It would be nice to be able to set the Camera.pose()
-        outside of Mode.moveTo()
-      </p>
+    
     </footer>
     <script type="module" src="app.js"></script>
     <html></html>
