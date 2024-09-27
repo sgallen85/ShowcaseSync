@@ -1,6 +1,49 @@
 const sdkKey = "my1unmcyza10z52eknxb971wa";
 const host = document.getElementById("showcase-host");
 const client = document.getElementById("showcase-client");
+let counter = 0;
+let firstLastName;;
+
+// Welcome to Game
+const startGame = () => {
+  // store name/email
+  firstLastName = document.getElementById("name-input").value;
+  const email = document.getElementById("email-input").value;
+
+  // Validate form
+  if (!firstLastName && !email) {
+    alert("Please fill in both name and email fields");
+    return;
+  }
+
+  // Hide Welcome Screen
+  document.getElementById("game-start-screen").style.display = 'none';
+  // Show Game
+  document.getElementById("game-interface").style.display = 'block';
+
+  // Initialize Game Timer
+  startGameTimer();
+}
+
+// Start Game Timer
+const startGameTimer = () => {
+  setInterval(() => {
+    counter++;
+    console.log(counter);
+    document.getElementById("timer").innerText = counter;
+    // see if counter reached 5 mins
+    if (counter === 300) {
+      // Show Game Over Banner
+      document.getElementById("game-over-banner").style.opacity = "1"
+      return;
+    }
+    // if (counter === 3) {
+    //   // Show Game Over Banner
+    //   document.getElementById("game-over-banner").style.opacity = "1"
+    //   return;
+    // }
+  }, 1000);
+}
 
 // Create Command Observer
 let cmd = {
