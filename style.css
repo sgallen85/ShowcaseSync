@@ -140,7 +140,7 @@ b {
   position: fixed;
   opacity: 0;
   transition: opacity 1s;
-  z-index: 100000;
+  z-index: -1;
 }
 .game-over-banner-visible {
   opacity: 1;

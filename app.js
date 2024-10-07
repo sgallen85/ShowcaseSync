@@ -34,14 +34,16 @@ const startGameTimer = () => {
     // see if counter reached 5 mins
     if (counter === 300) {
       // Show Game Over Banner
-      document.getElementById("game-over-banner").style.opacity = "1"
+      document.getElementById("game-over-banner").style.opacity = "1";
+      document.getElementById("game-over-banner").style.zIndex = 1000000;
       return;
     }
-    // if (counter === 3) {
-    //   // Show Game Over Banner
-    //   document.getElementById("game-over-banner").style.opacity = "1"
-    //   return;
-    // }
+    if (counter === 3) {
+      // Show Game Over Banner
+      document.getElementById("game-over-banner").style.opacity = "1"
+      document.getElementById("game-over-banner").style.zIndex = 1000000;
+      return;
+    }
   }, 1000);
 }
 
