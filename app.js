@@ -38,12 +38,12 @@ const startGameTimer = () => {
       document.getElementById("game-over-banner").style.zIndex = 1000000;
       return;
     }
-    if (counter === 3) {
-      // Show Game Over Banner
-      document.getElementById("game-over-banner").style.opacity = "1"
-      document.getElementById("game-over-banner").style.zIndex = 1000000;
-      return;
-    }
+    // if (counter === 3) {
+    //   // Show Game Over Banner
+    //   document.getElementById("game-over-banner").style.opacity = "1"
+    //   document.getElementById("game-over-banner").style.zIndex = 1000000;
+    //   return;
+    // }
   }, 1000);
 }
 
