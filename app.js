@@ -11,7 +11,7 @@ const startGame = () => {
   const email = document.getElementById("email-input").value;
 
   // Validate form
-  if (!firstLastName && !email) {
+  if (!name && !email) {
     alert("Please fill in both name and email fields");
     return;
   }
