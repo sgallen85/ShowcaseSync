@@ -11,11 +11,11 @@ header {
   display: flex;
   align-items: flex-end;    /* Aligns items to the bottom */
   justify-content: space-between; /* Distributes space between items */
-  padding: 0;
-  margin: 0 10px 0 10px;                /* Adds padding for spacing */
+  padding: 0 10px 0 10px;
+  margin: 0;                /* Adds padding for spacing */
   height: 80px;
   background-color: #FFFFFF;
-  border-bottom: #000000 solid 3px;
+  border-bottom: #000000 solid 1px;
   position: relative;
 }
 header h1{
@@ -40,6 +40,15 @@ header h2{
   color: #FF3158;
   align-self: flex-end;
   margin: 0 10px 5px 0;
+}
+.welcome{
+  display: flex:
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: left;
+  padding: 50px
 }
 #timer {
   margin: 0px;
