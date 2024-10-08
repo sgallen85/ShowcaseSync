@@ -7,7 +7,7 @@ let firstLastName;;
 // Welcome to Game
 const startGame = () => {
   // store name/email
-  firstLastName = document.getElementById("name-input").value;
+  name = document.getElementById("name-input").value;
   const email = document.getElementById("email-input").value;
 
   // Validate form
@@ -15,6 +15,21 @@ const startGame = () => {
     alert("Please fill in both name and email fields");
     return;
   }
+
+  // Define the Google Apps Script URL
+            const scriptURL = 'https://script.google.com/a/macros/matterport.com/s/AKfycbxeFPUf7G6xxzgBOG9kMnZlLN2E3j8U5kNShi4-QntqC8LMLnjFVKya5bWXcanbevU/exec';
+
+            // Post the form data
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new URLSearchParams({ 'name': name, 'email': email })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            //    window.location.href = 'thankyou.html'; // Redirect on success
+            })
+            .catch(error => console.error('Error:', error)); 
 
   // Hide Welcome Screen
   document.getElementById("game-start-screen").style.display = 'none';
@@ -30,7 +45,7 @@ const startGameTimer = () => {
   setInterval(() => {
     counter++;
     console.log(counter);
-    document.getElementById("timer").innerText = counter;
+    document.getElementById("timer1").innerText = counter;
     // see if counter reached 5 mins
     if (counter === 300) {
       // Show Game Over Banner
@@ -46,6 +61,35 @@ const startGameTimer = () => {
     // }
   }, 1000);
 }
+
+document.getElementById('timer').innerHTML =
+  05 + ":" + 00;
+startTimer();
+
+
+function startTimer() {
+  var presentTime = document.getElementById('timer').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+  if(m<0){
+    return
+  }
+  
+  document.getElementById('timer').innerHTML =
+    m + ":" + s;
+  console.log(m)
+  setTimeout(startTimer, 1000);
+  
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}
+
 
 // Create Command Observer
 let cmd = {
