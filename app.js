@@ -11,7 +11,7 @@ let firstLastName;;
  //  const email = document.getElementById("email-input").value;
 
   // Validate form
-<<<<<<< HEAD
+//<<<<<<< HEAD
  // if (!name && !email) {
   //  alert("Please fill in both name and email fields");
   //  return;
