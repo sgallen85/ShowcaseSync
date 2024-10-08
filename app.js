@@ -53,16 +53,14 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const startGame = () => {
-=======
+
   if (!name && !email) {
     alert("Please fill in both name and email fields");
     return;
   }
 
   // Define the Google Apps Script URL
-            const scriptURL = 'https://script.google.com/a/macros/matterport.com/s/AKfycbzDoVXbdDTDv8WZ1HmZS18ogXtdiPpB5aqtSU53cJ70CaK7LrdyEzf6QCNJwSnk_x8/exec';
->>>>>>> refs/remotes/origin/main
-
+         //   const scriptURL = 'https://script.google.com/a/macros/matterport.com/s/AKfycbzDoVXbdDTDv8WZ1HmZS18ogXtdiPpB5aqtSU53cJ70CaK7LrdyEzf6QCNJwSnk_x8/exec';
 
   // Hide Welcome Screen
   document.getElementById("game-start-screen").style.display = 'none';
