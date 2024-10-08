@@ -1,5 +1,5 @@
 body {
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: normal;
@@ -12,17 +12,15 @@ header {
   align-items: flex-end;    /* Aligns items to the bottom */
   justify-content: space-between; /* Distributes space between items */
   padding: 0;
-  margin: 0;                /* Adds padding for spacing */
+  margin: 0 10px 0 10px;                /* Adds padding for spacing */
   height: 80px;
   background-color: #FFFFFF;
   border-bottom: #000000 solid 3px;
+  position: relative;
 }
 header h1{
-  justify-self: center;        /* New: Center text horizontally */
-  align-items: flex-end;          /* New: Align text to the bottom */
-  text-align: center;             /* Ensure text is centered */
   white-space: nowrap;
-  font-weight: 10;
+  font-weight: bold;
   font-size: 24px;
   color: #222222;
   margin: 5px;
@@ -32,6 +30,9 @@ header img {
     height: 55px;
 }
 header h2{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 24px;	
   text-align: right;
   font-weight: bold;
