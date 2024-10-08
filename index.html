@@ -25,12 +25,9 @@
     <div id="game-start-screen">
       <h1>Welcome</h1>
       <p>Input your name and email below</p>
-
-   <form id="contactForm" onsubmit="handleSubmit(event)">
-        <input name="Email" type="email" placeholder="Email" required>
-        <input name="Name" type="text" placeholder="Name" required>
-        <button type="submit">Send</button>
-    </form>
+      <input type="text" id="name-input" placeholder="Your Name" required />
+      <input type="text" id="email-input" placeholder="Your Email" required />
+      <button id="game-start-btn" onClick="startGame()">Start Playing</button>
     </div>
     <div id="game-over-banner">
       <h1>Game Over</h1>
@@ -38,30 +35,44 @@
     </div>
     <div id="game-interface">
       <header>
+	<img 
+	  alt="Matterport Logo - Dark" 
+	  height="75" 
+	  src="https://images.ctfassets.net/icnj41gkyohw/4thXL2Wog5WjrJi8V3rHO4/9ca693c5334983cdf41c86ff009d5fd1/logo.svg" 
+	  class="center"
+	>
         <h1>AI-powered gameplay with digital twins.</h1>
         <p id="timer"></p>
         <a href="https://matterport.com">Matterport</a>
       </header>
       <article>
         <div id="wrapper">
-          <iframe
-            id="showcase-host"
-            src="https://my.matterport.com/show/?m=xB72BrYZjCq&play=1&qs=1&applicationKey=my1unmcyza10z52eknxb971wa"
-            width="100%"
-            height="500"
-            frameborder="0"
-            allow="xr-spatial-tracking"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            id="showcase-client"
-            src="https://my.matterport.com/show/?m=zeasBgZyy8E&play=1&qs=1&applicationKey=my1unmcyza10z52eknxb971wa"
-            width="100%"
-            height="500"
-            frameborder="0"
-            allow="xr-spatial-tracking"
-            allowfullscreen
-          ></iframe>
+ 	<table width="100%">
+          <tr>
+            <td width="50%">
+              <iframe
+                id="showcase-host"
+                src="https://my.matterport.com/show/?m=xB72BrYZjCq&play=1&qs=1&applicationKey=my1unmcyza10z52eknxb971wa"
+                style = "width: 100%;"
+		height="450"
+                frameborder="10"
+                allow="xr-spatial-tracking"
+                allowfullscreen
+              ></iframe>
+	    </td>
+	    <td width="50%">
+              <iframe
+                id="showcase-client"
+                src="https://my.matterport.com/show/?m=zeasBgZyy8E&play=1&qs=1&applicationKey=my1unmcyza10z52eknxb971wa"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                allow="xr-spatial-tracking"
+                allowfullscreen
+              ></iframe>
+	    </td>
+	   </tr>		
+	  </table>
         </div>
       </article>
       <footer>

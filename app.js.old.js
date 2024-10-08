@@ -4,59 +4,17 @@ const client = document.getElementById("showcase-client");
 let counter = 0;
 let firstLastName;;
 
-window.addEventListener("load", function() {
-  const form = document.getElementById('my-form');
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const data = new FormData(form);
-    const action = e.target.action;
-    fetch(action, {
-      method: 'POST',
-      body: data,
-    })
-    .then(() => {
-      alert("Success!");
-    })
-  });
-});
-
 // Welcome to Game
 const startGame = () => {
   // store name/email
-  name = document.getElementById("name-input").value;
+  firstLastName = document.getElementById("name-input").value;
   const email = document.getElementById("email-input").value;
 
   // Validate form
-  if (!name && !email) {
+  if (!firstLastName && !email) {
     alert("Please fill in both name and email fields");
     return;
   }
-
-
-// Define the Sheety API URL
-            const sheetyURL = 'https://api.sheety.co/8434ba71c79fa23cb5ae9d42fdc1d274/auUserInfo/sheet1';
-
-            // Post the form data
-            fetch(sheetyURL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    name: name,
-                    email: email
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                // Redirect to a thank you page
-               // window.location.href = 'thankyou.html';
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('There was an error submitting your data.');
-            });
 
   // Hide Welcome Screen
   document.getElementById("game-start-screen").style.display = 'none';
@@ -72,7 +30,7 @@ const startGameTimer = () => {
   setInterval(() => {
     counter++;
     console.log(counter);
-    document.getElementById("timer1").innerText = counter;
+    document.getElementById("timer").innerText = counter;
     // see if counter reached 5 mins
     if (counter === 300) {
       // Show Game Over Banner
@@ -88,35 +46,6 @@ const startGameTimer = () => {
     // }
   }, 1000);
 }
-
-document.getElementById('timer').innerHTML =
-  05 + ":" + 00;
-startTimer();
-
-
-function startTimer() {
-  var presentTime = document.getElementById('timer').innerHTML;
-  var timeArray = presentTime.split(/[:]+/);
-  var m = timeArray[0];
-  var s = checkSecond((timeArray[1] - 1));
-  if(s==59){m=m-1}
-  if(m<0){
-    return
-  }
-  
-  document.getElementById('timer').innerHTML =
-    m + ":" + s;
-  console.log(m)
-  setTimeout(startTimer, 1000);
-  
-}
-
-function checkSecond(sec) {
-  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
-  if (sec < 0) {sec = "59"};
-  return sec;
-}
-
 
 // Create Command Observer
 let cmd = {
