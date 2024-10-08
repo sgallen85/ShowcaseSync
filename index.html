@@ -34,9 +34,12 @@
      </header>
       <h1>Welcome</h1>
       <p>Input your name and email below</p>
-      <input type="text" id="name-input" placeholder="Your Name" required />
-      <input type="text" id="email-input" placeholder="Your Email" required />
-      <button id="game-start-btn" onClick="startGame()">Start Playing</button>
+
+   <form id="contactForm" onsubmit="handleSubmit(event)">
+        <input name="Email" type="email" placeholder="Email" required>
+        <input name="Name" type="text" placeholder="Name" required>
+        <button type="submit">Send</button>
+    </form>
     </div>
     <div id="game-over-banner">
       <h1>Game Over</h1>
