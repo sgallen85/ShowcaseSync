@@ -48,11 +48,13 @@ const startGame = () => {
       document.getElementById("game-start-screen").style.display = 'none';
       // Show Game
       document.getElementById("game-interface").style.display = 'block';
-
+      // Set countdown to 5 min
+      document.getElementById('timer').innerHTML = 05 + ":" + 00;
 
 
       // Initialize Game Timer
       startGameTimer();
+      startTimer();
 }
 
 
@@ -61,7 +63,7 @@ const startGameTimer = () => {
   setInterval(() => {
     counter++;
     console.log(counter);
-    document.getElementById("timer").innerText = counter;
+    //document.getElementById("timer").innerText = counter;
     // see if counter reached 5 mins
     if (counter === 300) {
       // Show Game Over Banner
@@ -78,6 +80,29 @@ const startGameTimer = () => {
   }, 1000);
 }
 
+
+function startTimer() {
+  var presentTime = document.getElementById('timer').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+  if(m<0){
+    return
+  }
+  
+  document.getElementById('timer').innerHTML =
+    m + ":" + s;
+  console.log(m)
+  setTimeout(startTimer, 1000);
+  
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}
 
 
 
