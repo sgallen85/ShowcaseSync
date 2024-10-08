@@ -17,7 +17,7 @@ const startGame = () => {
   }
 
   // Define the Google Apps Script URL
-            const scriptURL = 'https://script.google.com/a/macros/matterport.com/s/AKfycbxeFPUf7G6xxzgBOG9kMnZlLN2E3j8U5kNShi4-QntqC8LMLnjFVKya5bWXcanbevU/exec';
+            const scriptURL = 'https://script.google.com/a/macros/matterport.com/s/AKfycbyE3XZ1EHAi11eB6fqgz2NnKOC0yv-6o51SnaXkkFN-4lboDjQZeYZhGTN7PyFq7SE/exec';
 
             // Post the form data
             fetch(scriptURL, {
