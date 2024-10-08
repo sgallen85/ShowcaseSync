@@ -27,11 +27,58 @@ const startGame = () => {
   const email = document.getElementById("email-input").value;
 
   // Validate form
+<<<<<<< HEAD
+=======
+//<<<<<<< HEAD
+ // if (!name && !email) {
+  //  alert("Please fill in both name and email fields");
+  //  return;
+ // }
+
+// Ensure the script runs after the DOM has fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get form values
+        const email = document.querySelector('input[name="Email"]').value;
+        const name = document.querySelector('input[name="Name"]').value;
+
+        // Google Apps Script URL
+        const scriptURL = 'https://script.google.com/a/macros/matterport.com/s/AKfycbzDoVXbdDTDv8WZ1HmZS18ogXtdiPpB5aqtSU53cJ70CaK7LrdyEzf6QCNJwSnk_x8/exec';
+
+        // Prepare the data to be sent
+        const formData = new FormData();
+        formData.append('Email', email);
+        formData.append('Name', name);
+
+        // Use fetch to send the POST request
+        fetch(scriptURL, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            alert('Form submitted successfully!');  // Alert or show confirmation message
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error submitting the form.');  // Show error message
+        });
+    });
+});
+
+const startGame = () => {
+=======
+>>>>>>> parent of 8c9d07a (Update app.js)
   if (!name && !email) {
     alert("Please fill in both name and email fields");
     return;
   }
 
+<<<<<<< HEAD
 
 // Define the Sheety API URL
             const sheetyURL = 'https://api.sheety.co/8434ba71c79fa23cb5ae9d42fdc1d274/auUserInfo/sheet1';
@@ -57,6 +104,12 @@ const startGame = () => {
                 console.error('Error:', error);
                 alert('There was an error submitting your data.');
             });
+=======
+  // Define the Google Apps Script URL
+            const scriptURL = 'https://script.google.com/a/macros/matterport.com/s/AKfycbzDoVXbdDTDv8WZ1HmZS18ogXtdiPpB5aqtSU53cJ70CaK7LrdyEzf6QCNJwSnk_x8/exec';
+>>>>>>> refs/remotes/origin/main
+
+>>>>>>> parent of 8c9d07a (Update app.js)
 
   // Hide Welcome Screen
   document.getElementById("game-start-screen").style.display = 'none';
