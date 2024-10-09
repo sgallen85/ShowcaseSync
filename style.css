@@ -6,14 +6,15 @@ body {
   background: #FFFFFF;
   padding: 0;
   margin: 0;
+  width: 100vw;
 }
 header {
   display: flex;
   align-items: flex-end;    /* Aligns items to the bottom */
   justify-content: space-between; /* Distributes space between items */
-  padding: 0 10px 0 10px;
   margin: 0;                /* Adds padding for spacing */
   height: 80px;
+  width: 100vw;
   background-color: #FFFFFF;
   border-bottom: #000000 solid 1px;
   position: relative;
@@ -53,26 +54,33 @@ header h2{
 #timer {
   margin: 0px;
 }
-article {
-  margin: 40px auto;
-  padding: 40px 40px 40px 40px;
-  max-width: 2120px;
-}
-footer {
-  background-color: #222222;
-  color: #fff;
-  padding: 40px;
+footer{
+  display: flex;
+  align-items: center;    /* Aligns items to the bottom */
+  justify-content: space-between; /* Distributes space between items */
+  height: 10vh;
+  width: 100vw;
+  position: absolute;
   font-size: 18px;
-  position:absolute;
-   bottom:0;
-   width:100%;
-   height:100px;
+  bottom:0;
+  font-size: 18px;
+  color: #fff;
+  background-color: #222222;
 }
-footer > * {
-  display: block;
-  margin: 0px auto 1.5em auto;
-  line-height: 1.5em;
-  font-size: 14px;
+footer > ={
+  margin: 0 10vh 10vh 10vh;
+}
+
+footer img{
+  width: auto;
+  height: 55px;
+}
+article {
+  margin: 3vh 0 0 0;
+  padding: 40px 40px 40px 40px;
+  max-width: 100vw;
+  
+}
 }
 footer h2 {
   font-size: 24px;
@@ -83,16 +91,17 @@ footer a {
 }
 iframe {
   border-radius: 20px;
-  margin: 0px auto 10px auto;
   border: 1px solid #333;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   height: 480px;
-  width: 100%;
+  width: 90%;
 }
 b {
   color: #000000;
 }
-
+footer p{
+  margin: 0;
+}
 table {
     display: table;
     border-collapse: separate;
@@ -111,10 +120,11 @@ table {
     font-variant: normal;
 }
 
-
-#wrapper {
+.wrapper {
   position: relative;
   display: flex;
+  margin: 10px 10px 10px 10px;
+  align-items: center;
 }
 #sweepnav {
   position: absolute;
@@ -166,8 +176,8 @@ table {
   display: none;
 }
 #game-start-screen {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: block;
   background: white;
 }

@@ -10,14 +10,14 @@ let name;;
 const startGame = () => {
 
       // Get form values
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
+      // const name = document.getElementById('name').value;
+      // const email = document.getElementById('email').value;
 
       // Validate form
-      if (!name && !email) {
-      alert("Please fill in both name and email fields");
-      return;
-      }
+      // if (!name && !email) {
+      // alert("Please fill in both name and email fields");
+      // return;
+      /// }
 
       // Airtable API details
       const apiKey = 'pat7lLEcC04B2hMgm.724de421063ddb1aa0128a436151e73e26340911936ff9e7ad416895a338b32a';  // Replace with your Airtable API key
@@ -27,22 +27,22 @@ const startGame = () => {
       // Airtable API URL
       const airtableURL = `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(tableName)}`;
 
-      const data = {
-      fields: {
-               Name: name,    // Ensure these match Airtable field names
-               Email: email
-              }
-        };
+      // const data = {
+      // fields: {
+         //      Name: name,    // Ensure these match Airtable field names
+         //      Email: email
+         //     }
+        //  };
 
        // Post the form data to Airtable
-       fetch(airtableURL, {
-         method: 'POST',
-         headers: {
-                 'Authorization': `Bearer ${apiKey}`,
-                 'Content-Type': 'application/json'
-                  },
-         body: JSON.stringify(data)
-         })
+    //   fetch(airtableURL, {
+    //     method: 'POST',
+    //     headers: {
+    //             'Authorization': `Bearer ${apiKey}`,
+    //             'Content-Type': 'application/json'
+    //             },
+    //     body: JSON.stringify(data)
+    //     })
 
       // Hide Welcome Screen
       document.getElementById("game-start-screen").style.display = 'none';

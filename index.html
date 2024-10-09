@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -27,9 +28,10 @@
     <script src="https://static.matterport.com/showcase-sdk/latest.js"></script>
   </head>
 
-  <body>
-    <div id="game-start-screen">
-  <header>
+<body>
+
+  <div id="game-start-screen">
+   <header>
         <div class="img">
          <img
           alt="Matterport Logo - Dark"
@@ -37,14 +39,26 @@
          >
         </div>
          <h1>AI-powered gameplay with digital twins</h1>
-  </header>
+   </header>
     <div class="welcome">
       <h1 style="font-size: 50px; margin: 5px">Welcome</h1>
-      <p>Input your name and email below</p>
-      <input type="text" id="name" type="text" placeholder="Your Name" required />
-      <input type="text" id="email" type="email" placeholder="Your Email" required />
       <button id="game-start-btn" onClick="startGame()">Start Playing</button>
     </div>
+   <footer>
+        <div>
+        <a name="about"></a>
+        <h2>Spot the Difference</h2>
+        <p>
+          Try to spot the difference between these Matterport digital twins.
+        </p>
+        </div>
+         <div>
+         <img
+          alt="Matterport AU Parnet Logo"
+          src="./images/AUP.png"
+         >
+        </div>
+   </footer>  
   </div>
 
     <div id="game-over-banner">
@@ -70,22 +84,18 @@
               <iframe
                 id="showcase-host"
                 src="https://my.matterport.com/show/?m=xB72BrYZjCq&play=1&qs=1&applicationKey=my1unmcyza10z52eknxb971wa"
-                style = "width: 100%;"
-		height="450"
-                frameborder="10"
                 allow="xr-spatial-tracking"
                 allowfullscreen
+   		align="center"
               ></iframe>
 	    </td>
 	    <td width="50%">
               <iframe
                 id="showcase-client"
                 src="https://my.matterport.com/show/?m=zeasBgZyy8E&play=1&qs=1&applicationKey=my1unmcyza10z52eknxb971wa"
-                width="100%"
-                height="100%"
-                frameborder="0"
                 allow="xr-spatial-tracking"
                 allowfullscreen
+		align="center"
               ></iframe>
 	    </td>
 	   </tr>		
@@ -93,12 +103,19 @@
         </div>
       </article>
       <footer>
-        <a name="about"></a>
+        <div>
+	<a name="about"></a>
         <h2>Spot the Difference</h2>
         <p>
           Try to spot the difference between these Matterport digital twins.
         </p>
-      
+        </div>
+         <div>
+         <img
+          alt="Matterport AU Parnet Logo"
+          src="./images/AUP.png"
+         >
+        </div>
       </footer>
     </div>
     <script src="app.js"></script>
