@@ -30,95 +30,104 @@
 
 <body>
 
-  <div id="game-start-screen">
+ <div id="game-start-screen">
    <header>
-        <div class="img">
-         <img
-          alt="Matterport Logo - Dark"
-          src="https://images.ctfassets.net/icnj41gkyohw/4thXL2Wog5WjrJi8V3rHO4/9ca693c5334983cdf41c86ff009d5fd1/logo.svg"
-         >
-        </div>
-         <h1>AI-powered gameplay with digital twins</h1>
+     <div class="img">
+       <img
+         alt="Matterport Logo - Dark"
+         src="https://images.ctfassets.net/icnj41gkyohw/4thXL2Wog5WjrJi8V3rHO4/9ca693c5334983cdf41c86ff009d5fd1/logo.svg"
+       >
+     </div>
+     <h1>AI-powered gameplay with digital twins</h1>
    </header>
-    <div class="welcome">
-      <h1 style="font-size: 50px; margin: 5px">Welcome</h1>
-      <button id="game-start-btn" onClick="startGame()">Start Playing</button>
-    </div>
+   
+   <div class="welcome">
+     <h1 style="font-size: 67px; margin: 40px;">Welcome</h1>
+     <div class="break"></div> 
+       <button id="game-start-btn" onClick="startGame()">Start Playing</button>
+     </div>
    <footer>
-        <div>
-        <a name="about"></a>
-        <h2>Spot the Difference</h2>
-        <p>
-          Try to spot the difference between these Matterport digital twins.
-        </p>
-        </div>
-         <div>
-         <img
-          alt="Matterport AU Parnet Logo"
-          src="./images/AUP.png"
-         >
-        </div>
+     <div>
+       <img
+        alt="Matterport AU Parnet Logo"
+        src="./images/AUP.png"
+       >
+     </div>
    </footer>  
-  </div>
+ </div>
 
-    <div id="game-over-banner">
-      <h1>Game Over</h1>
-      <p>Thanks for playing!</p>
-    </div>
-    <div id="game-interface">
-      <header>
-	<div class="img">
-	 <img 
-	  alt="Matterport Logo - Dark" 
-	  src="https://images.ctfassets.net/icnj41gkyohw/4thXL2Wog5WjrJi8V3rHO4/9ca693c5334983cdf41c86ff009d5fd1/logo.svg" 
-	 >
-	</div>
-         <h2>Time Left:&nbsp;<Time left = <span id="timer"></h2>
-         <h1>AI-powered gameplay with digital twins</h1>
-     </header>
-      <article>
-        <div id="wrapper">
- 	<table width="100%">
-          <tr>
-            <td width="50%">
-              <iframe
-                id="showcase-host"
-                src="https://my.matterport.com/show/?m=xB72BrYZjCq&play=1&qs=1&applicationKey=my1unmcyza10z52eknxb971wa"
-                allow="xr-spatial-tracking"
-                allowfullscreen
-   		align="center"
-              ></iframe>
-	    </td>
-	    <td width="50%">
-              <iframe
-                id="showcase-client"
-                src="https://my.matterport.com/show/?m=zeasBgZyy8E&play=1&qs=1&applicationKey=my1unmcyza10z52eknxb971wa"
-                allow="xr-spatial-tracking"
-                allowfullscreen
-		align="center"
-              ></iframe>
-	    </td>
-	   </tr>		
-	  </table>
-        </div>
-      </article>
-      <footer>
-        <div>
-	<a name="about"></a>
-        <h2>Spot the Difference</h2>
-        <p>
-          Try to spot the difference between these Matterport digital twins.
-        </p>
-        </div>
-         <div>
-         <img
-          alt="Matterport AU Parnet Logo"
-          src="./images/AUP.png"
-         >
-        </div>
-      </footer>
-    </div>
-    <script src="app.js"></script>
-    <html></html>
-  </body>
+ <div id="game-over-banner">
+  <div> 
+   <!--<div id="MTTR-logo">
+     <img
+       alt="Matterport Icon Logo"
+       src="./images/Icon_Grayscale_Dark_RGB.svg"
+     >
+     </img>
+   <div class="break"></div>
+   </div> -->  
+   <div id="game-over-text">
+     <img alt="Matterport Icon Logo" src="./images/Icon_Grayscale_Dark_RGB.svg" style="
+      height: 225px;
+      width: auto;
+     "> 
+     <div class="break"></div>
+     <h1 style="font-size: 90px;">Game Over</h1>
+     <div class="break"></div>      
+     <p style="font-size: 40px;";>Thanks for playing!</p>
+   </div>   
+  </div>
+ </div>
+
+ <div id="game-interface">
+   <header>
+     <div class="img">
+       <img 
+         alt="Matterport Logo - Dark" 
+         src="https://images.ctfassets.net/icnj41gkyohw/4thXL2Wog5WjrJi8V3rHO4/9ca693c5334983cdf41c86ff009d5fd1/logo.svg" 
+       >
+     </div>
+      <h2>Time Left:&nbsp;<Time left = <span id="timer"></h2>
+      <h1>AI-powered gameplay with digital twins</h1>
+   </header>
+     <div id="info">
+       <h3>Spot the differenece between these Matterport Digital Twins! &emsp;Use the LEFT tour to navigate.</h3>
+     </div>
+
+   <article>
+     <div id="wrapper">
+       <iframe
+         id="showcase-host"
+         src="https://my.matterport.com/show/?m=xB72BrYZjCq&play=1&qs=1&applicationKey=my1unmcyza10z52eknxb971wa"
+         allow="xr-spatial-tracking"
+         allowfullscreen
+         align="center"
+       >
+       </iframe>
+       <iframe
+         id="showcase-client"
+         src="https://my.matterport.com/show/?m=zeasBgZyy8E&play=1&qs=1&applicationKey=my1unmcyza10z52eknxb971wa"
+         allow="xr-spatial-tracking"
+         allowfullscreen
+         align="center"
+       >
+       </iframe>
+     </div>
+   </article>
+   
+   <footer>
+     <div>
+       <img
+         alt="Matterport AU Partner Logo"
+         src="./images/AUP.png"
+       >
+       </img>
+     </div>
+   </footer>
+ </div>
+
+ <script src="app.js"></script>
+ <html></html>
+
+</body>
 </html>
