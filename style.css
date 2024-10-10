@@ -7,8 +7,8 @@ body {
   padding: 0;
   margin: 0;
   width: 100vw;
-  margin-block-start: 1px;
-  margin-block-end: 1px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
@@ -16,7 +16,7 @@ header {
   display: flex;
   justify-content: space-between; /* Distributes space between items */
   margin: 0;                /* Adds padding for spacing */
-  height: 80px;
+  height: 115px;
   width: 100vw;
   background-color: #FFFFFF;
   border-bottom: #DADADA solid 1px;
@@ -34,14 +34,14 @@ h1 {
 }
 header img {
   width: auto;
-  height: 55px;
+  height: 75px;
   align-self: center;
-  margin: 0 0 0 10px;}
+  margin: 0 0 0 15px;}
 h2 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 24px;	
+  font-size: 28px;	
   text-align: right;
   font-weight: bold;
   white-space: nowrap;
@@ -52,6 +52,22 @@ h2 {
 }
 h3 {
   color: #FFFFFF;
+}
+h4{
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 28px;
+  color: #222222;
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 15px 10px 0;
+  text-wrap: balance;
+  width: 276px;
+  text-align: left;
+}
+#header-text{
+  width: 300px;
 }
 #info{
   background: #FF3158;
@@ -101,7 +117,7 @@ footer > ={
 footer img{
   width: auto;
   height: 8.5vh;
-  margin: 0 25px 0 0;
+  margin: 0 15px 0 0;
 }
 article {
   margin: 3vh 0 0 0;

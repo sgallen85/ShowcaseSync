@@ -5,51 +5,15 @@ const client = document.getElementById("showcase-client");
 let counter = 0;
 let name;;
 
-
 // Welcome to Game
 const startGame = () => {
-
-      // Get form values
-      // const name = document.getElementById('name').value;
-      // const email = document.getElementById('email').value;
-
-      // Validate form
-      // if (!name && !email) {
-      // alert("Please fill in both name and email fields");
-      // return;
-      /// }
-
-      // Airtable API details
-      const apiKey = 'pat7lLEcC04B2hMgm.724de421063ddb1aa0128a436151e73e26340911936ff9e7ad416895a338b32a';  // Replace with your Airtable API key
-      const baseId = 'appQ36jFxsJrVsACw';  // Replace with your Airtable Base ID
-      const tableName = 'tblXY7uQEAYOEZEFj';  // Replace with your Airtable table name (e.g., "Form Submissions")
-
-      // Airtable API URL
-      const airtableURL = `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(tableName)}`;
-
-      // const data = {
-      // fields: {
-         //      Name: name,    // Ensure these match Airtable field names
-         //      Email: email
-         //     }
-        //  };
-
-       // Post the form data to Airtable
-    //   fetch(airtableURL, {
-    //     method: 'POST',
-    //     headers: {
-    //             'Authorization': `Bearer ${apiKey}`,
-    //             'Content-Type': 'application/json'
-    //             },
-    //     body: JSON.stringify(data)
-    //     })
 
       // Hide Welcome Screen
       document.getElementById("game-start-screen").style.display = 'none';
       // Show Game
       document.getElementById("game-interface").style.display = 'block';
       // Set countdown to 5 min
-      document.getElementById('timer').innerHTML = 05 + ":" + 00;
+      document.getElementById('timer').innerHTML = 5 + ":" + 00;
 
 
       // Initialize Game Timer
@@ -57,6 +21,10 @@ const startGame = () => {
       startTimer();
 }
 
+// Sleep function
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 // Start Game Timer
 const startGameTimer = () => {
@@ -65,22 +33,25 @@ const startGameTimer = () => {
     console.log(counter);
     //document.getElementById("timer").innerText = counter;
     // see if counter reached 5 mins
-    if (counter === 3) {
+    if (counter === 300) {
       // Show Game Over Banner
       document.getElementById("game-over-banner").style.opacity = "1";
       document.getElementById("game-over-banner").style.zIndex = 1000000;
+      // Call function to restart the game
+      reload();
       return;
     }
-  //  if (counter === 120) {
-      // Show Game Over Banner
-  //    document.getElementById("game-over-banner").style.opacity = "1"
-  //    document.getElementById("game-over-banner").style.zIndex = 1000000;
-  //    return;
-  //  }
   }, 1000);
 }
 
+// Wait 15 seconds after game ends then rolad the webpage to restart the game
+async function reload(){
+  await sleep(15000);
+  location.reload();
+  console.log("reboot");
+}
 
+// Creats min / sec timer for game display (I know it's redundant, don't care)
 function startTimer() {
   var presentTime = document.getElementById('timer').innerHTML;
   var timeArray = presentTime.split(/[:]+/);
@@ -90,12 +61,12 @@ function startTimer() {
   if(m<0){
     return
   }
-  
+
   document.getElementById('timer').innerHTML =
     m + ":" + s;
   console.log(m)
   setTimeout(startTimer, 1000);
-  
+
 }
 
 function checkSecond(sec) {
