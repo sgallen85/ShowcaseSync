@@ -289,3 +289,14 @@ table {
 div {
     display: flex;
 }
+#showcase-block {
+    height: 60vh;
+    color: white;
+    background: #FF3158;
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+    justify-content: right;
+    width: 50%;
+    left: 50%;
+}
