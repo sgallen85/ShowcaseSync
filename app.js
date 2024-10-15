@@ -190,63 +190,63 @@ async function onHostConnect(mpSdk) {
     };
   });
   // Sync Tags
-  mpSdk.Tag.openTags.subscribe({
-    prevState: {
-      hovered: null,
-      docked: null,
-      selected: null,
-    },
-    onChanged(newState) {
-      if (newState.hovered !== this.prevState.hovered) {
-        if (newState.hovered) {
-          cmd.a = {
-            cmd: "tagOpen",
-            val: newState.hovered,
-          };
-        } else {
-          cmd.a = {
-            cmd: "tagClose",
-            val: this.prevState.hovered,
-          };
-        }
-      }
-      if (newState.docked !== this.prevState.docked) {
-        if (newState.docked) {
-          cmd.a = {
-            cmd: "tagDock",
-            val: newState.docked,
-          };
-        } else {
-          cmd.a = {
-            cmd: "tagClose",
-            val: this.prevState.docked,
-          };
-        }
-      }
+//  mpSdk.Tag.openTags.subscribe({
+//    prevState: {
+//      hovered: null,
+//      docked: null,
+//      selected: null,
+//    },
+//    onChanged(newState) {
+//     if (newState.hovered !== this.prevState.hovered) {
+//       if (newState.hovered) {
+//          cmd.a = {
+//            cmd: "tagOpen",
+//          val: newState.hovered,
+ //       };
+ //    } else {
+  //      cmd.a = {
+    //        cmd: "tagClose",
+    //        val: this.prevState.hovered,
+    //      };
+    //    }
+   //   }
+//      if (newState.docked !== this.prevState.docked) {
+//        if (newState.docked) {
+//          cmd.a = {
+//            cmd: "tagDock",
+//            val: newState.docked,
+//          };
+//        } else {
+//          cmd.a = {
+//            cmd: "tagClose",
+//            val: this.prevState.docked,
+//          };
+//        }
+//      }
 
       // only compare the first 'selected' since only one tag is currently supported
-      const [selected = null] = newState.selected; // destructure and coerce the first Set element to null
-      if (selected !== this.prevState.selected) {
-        if (selected) {
-          cmd.a = {
-            cmd: "tagOpen",
-            val: selected,
-          };
-        } else {
-          cmd.a = {
-            cmd: "tagClose",
-            val: this.prevState.selected,
-          };
-        }
-      }
+//      const [selected = null] = newState.selected; // destructure and coerce the first Set element to null
+//      if (selected !== this.prevState.selected) {
+//        if (selected) {
+//          cmd.a = {
+//            cmd: "tagOpen",
+//            val: selected,
+//          };
+//        } else {
+//          cmd.a = {
+//            cmd: "tagClose",
+//            val: this.prevState.selected,
+//          };
+//        }
+//      }
 
       // clone and store the new state
-      this.prevState = {
-        ...newState,
-        selected,
-      };
-    },
-  });
+//      this.prevState = {
+//       ...newState,
+//        selected,
+//      };
+//    },
+//  });
 }
 
 async function onClientConnect(mpSdk) {
@@ -257,18 +257,18 @@ async function onClientConnect(mpSdk) {
   // Observe which sweep the client is on.
   cmd.registerListener(async function (val) {
     switch (val.cmd) {
-      case "tagOpen":
-        mpSdk.Tag.open(val.val);
-        break;
-      case "tagClose":
-        mpSdk.Tag.close(val.val);
-        break;
-      case "tagDock":
-        mpSdk.Tag.dock(val.val);
-        break;
-      case "tagClose":
-        mpSdk.Tag.close(val.val);
-        break;
+//      case "tagOpen":
+//        mpSdk.Tag.open(val.val);
+//        break;
+//      case "tagClose":
+//        mpSdk.Tag.close(val.val);
+//        break;
+//      case "tagDock":
+//        mpSdk.Tag.dock(val.val);
+//        break;
+//      case "tagClose":
+//        mpSdk.Tag.close(val.val);
+//        break;
 
       case "moveTo":
         let moveTo = (resp) =>
@@ -324,7 +324,7 @@ async function onClientConnect(mpSdk) {
         let newMode = (resp) =>
           new Promise((resolve, reject) => {
             mpSdk.Mode.moveTo(val.val, {
-              transition: "transition.fly",
+              transition: "transition.instant",
             })
               .then(function (newMode) {
                 // Move successful.
