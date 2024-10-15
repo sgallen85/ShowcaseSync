@@ -97,7 +97,7 @@ h5 {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  padding: 100px;
+  padding: 100px 0 0 0;
   flex-flow: wrap;
   justify-content: center;
   width: 100%;
