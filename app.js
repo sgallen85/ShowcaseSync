@@ -13,7 +13,7 @@ const startGame = () => {
       // Show Game
       document.getElementById("game-interface").style.display = 'block';
       // Set countdown to 5 min
-      document.getElementById('timer').innerHTML = 0 + ":" + 10;
+      document.getElementById('timer').innerHTML = 5 + ":" + 00;
 
 
       // Initialize Game Timer
@@ -33,7 +33,7 @@ const startGameTimer = () => {
     console.log(counter);
     //document.getElementById("timer").innerText = counter;
     // see if counter reached 5 mins
-    if (counter === 10) {
+    if (counter === 300) {
       // Show Game Over Banner
       document.getElementById("game-over-banner").style.opacity = "1";
       document.getElementById("game-over-banner").style.zIndex = 1000000;
