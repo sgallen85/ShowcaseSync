@@ -33,7 +33,7 @@ const startGameTimer = () => {
     console.log(counter);
     //document.getElementById("timer").innerText = counter;
     // see if counter reached 5 mins
-    if (counter === 300) {
+    if (counter === 10) {
       // Show Game Over Banner
       document.getElementById("game-over-banner").style.opacity = "1";
       document.getElementById("game-over-banner").style.zIndex = 1000000;
