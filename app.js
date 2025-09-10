@@ -13,7 +13,7 @@ const startGame = () => {
       // Show Game
       document.getElementById("game-interface").style.display = 'block';
       // Set countdown to 5 min
-      document.getElementById('timer').innerHTML = 5 + ":" + 00;
+      document.getElementById('timer').innerHTML = 0 + ":" + 10;
 
 
       // Initialize Game Timer
